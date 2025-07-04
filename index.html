@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <title>Dias com meu amorzinho</title>
+</head>
+<body>
+  <div class="polaroid">
+    <div class="photo-container">
+      <button class="arrow left" onclick="prevImage()">&#10094;</button>
+
+      <div class="flip-box" id="flipBox" onclick="flipImage()">
+        <div class="flip-box-front">
+          <img id="imageDisplay" src="" alt="Foto do casal" />
+        </div>
+        <div class="flip-box-back" id="texto">
+          Por muitos outros dias com você, meu amor❤
+        </div>
+      </div>
+
+      <button class="arrow right" onclick="nextImage()">&#10095;</button>
+    </div>
+
+    <div class="cuzinho">
+      <h1>Jam e Nanda❤</h1>
+    </div>
+    <h4>Juntos há:</h4>
+    <div id="counter"></div>
+    <div class="audio-player">
+  <div class="track-info">Die with a smile</div>
+  <audio id="audio" src="DieWithASmile.mp3"></audio>
+  <button id="playPauseBtn" aria-label="Tocar/Pausar">&#9658;</button>
+  <input type="range" id="progressBar" value="0" min="0" max="100" step="1">
+</div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
