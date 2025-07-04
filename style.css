@@ -165,23 +165,13 @@ img.fade-in {
 }
 
 #playPauseBtn {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 8px 12px;
-  border-radius: 50%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 28px;
   cursor: pointer;
-  font-size: 18px;
-  min-width: 40px;
-  min-height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-#playPauseBtn:active {
-  transform: scale(0.95);
+  user-select: none;
+  transition: color 0.3s ease;
 }
 
 #playPauseBtn:hover {
