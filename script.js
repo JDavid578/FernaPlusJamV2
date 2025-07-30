@@ -63,8 +63,26 @@ function updateCounter() {
   const minutes = Math.floor((elapsedTime % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
 
+  const totaldays = days;
+  const totalhours = Math.floor(elapsedTime / (1000*60*60));
+  const totalminutes = Math.floor(elapsedTime / (1000*60));
+  const totalseconds = Math.floor(elapsedTime / 1000);
+
   document.getElementById("counter").innerHTML =
     `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+  document.getElementById("totalday").innerHTML =
+    `${totaldays} Dias ❤`;
+    
+  document.getElementById("totalhour").innerHTML =
+    `${totalhours} Horas ❤`;    
+    
+  document.getElementById("totalminute").innerHTML =
+    `${totalminutes} Minutos ❤`;
+    
+  document.getElementById("totalsecond").innerHTML =
+    `${totalseconds} Segundos ❤ `;    
+
 }
 
 setInterval(updateCounter, 1000);
