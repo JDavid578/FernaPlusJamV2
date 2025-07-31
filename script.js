@@ -14,18 +14,18 @@ let currentIndex = 0;
 function updateImage() {
   const image = document.getElementById("imageDisplay");
 
-  // Animação de saída
+
   image.classList.add("fade-out");
 
   setTimeout(() => {
     image.src = imageLinks[currentIndex];
 
-    // Quando a nova imagem carregar, aplica fade-in
+    
     image.onload = () => {
       image.classList.remove("fade-out");
       image.classList.add("fade-in");
 
-      // Remove a classe após a animação
+      
       setTimeout(() => {
         image.classList.remove("fade-in");
       }, 500);
@@ -73,6 +73,9 @@ function updateCounter() {
 
   document.getElementById("totalday").innerHTML =
     `${totaldays} Dias ❤`;
+
+  document.getElementById("diaspassados").innerHTML =
+    `${totaldays} dias`;
     
   document.getElementById("totalhour").innerHTML =
     `${totalhours} Horas ❤`;    
@@ -81,7 +84,8 @@ function updateCounter() {
     `${totalminutes} Minutos ❤`;
     
   document.getElementById("totalsecond").innerHTML =
-    `${totalseconds} Segundos ❤ `;    
+    `${totalseconds} Segundos ❤ `;  
+    
 
 }
 
@@ -96,20 +100,20 @@ const progressBar = document.getElementById("progressBar");
 playPauseBtn.addEventListener("click", () => {
   if (audio.paused) {
     audio.play();
-    playPauseBtn.innerHTML = "&#10073;&#10073;"; // pausa (||)
+    playPauseBtn.innerHTML = "&#10073;&#10073;"; // pausa 
   } else {
     audio.pause();
-    playPauseBtn.innerHTML = "&#9658;"; // play (▶)
+    playPauseBtn.innerHTML = "&#9658;"; // play 
   }
 });
 
-// Atualiza barra de progresso conforme toca
+
 audio.addEventListener("timeupdate", () => {
   const progressPercent = (audio.currentTime / audio.duration) * 100;
   progressBar.value = progressPercent || 0;
 });
 
-// Controlar o áudio ao arrastar barra de progresso
+
 progressBar.addEventListener("input", () => {
   audio.currentTime = (progressBar.value / 100) * audio.duration;
 });
