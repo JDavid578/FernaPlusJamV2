@@ -1,28 +1,33 @@
 const perguntas = [
   {
-    texto: "Qual a cor do céu em um dia claro?",
-    correta: "Azul",
-    alternativas: ["Azul", "Verde", "Vermelho", "Amarelo"]
+    texto: "Qual o nome da musica que você me mostrou quando a gente se conheceu?",
+    correta: "Memories",
+    alternativas: ["heather", "Memories", "ocean eyes", "Astronomy"]
   },
   {
-    texto: "Quantos dias tem uma semana?",
-    correta: "7",
-    alternativas: ["5", "7", "10", "3"]
+    texto: "Qual a hora aproximada que a gente se beijou?",
+    correta: "13:00",
+    alternativas: ["13:00", "12:00", "14:00", "11:00"]
   },
   {
-    texto: "Qual animal é conhecido como 'rei da selva'?",
-    correta: "Leão",
-    alternativas: ["Elefante", "Tigre", "Leão", "Cavalo"]
+    texto: "O que a gente comeu quando assistiu 'Ainda estou aqui'?",
+    correta: "Lays Sour Cream",
+    alternativas: ["Lays Classic", "Lays Churrasco", "Lays Cheese", "Lays Sour Cream"]
   },
   {
-    texto: "Quantos meses tem um ano?",
-    correta: "12",
-    alternativas: ["10", "11", "12", "13"]
+    texto: "Qual era o sabor do milkshake que a gente dividiu na milkmoo?",
+    correta: "Malhada",
+    alternativas: ["Mimosa", "Lolita", "Malhada", "Manhosa"]
   },
   {
-    texto: "Qual é a capital do Brasil?",
-    correta: "Brasília",
-    alternativas: ["São Paulo", "Rio de Janeiro", "Brasília", "Salvador"]
+    texto: "Quantas flores eu te dei no dia da Jaqueira?",
+    correta: "5",
+    alternativas: ["4", "5", "6", "7"]
+  },
+  {
+    texto: "qual foi o primeiro apelido que eu te dei?",
+    correta: "Bonitinha",
+    alternativas: ["Bonitinha", "Nanda", "Meu anjo", "Meu amor"]
   }
 ];
 
@@ -74,10 +79,10 @@ function mostrarResultado() {
   if (pontuacao < 3){
   resultadoTexto.textContent = `Ihhhhhh, esperava mais em... acertar só ${pontuacao} de ${perguntas.length} perguntas ta fraco, tente dnv`;
   }
-  if (pontuacao > 2 && pontuacao < 5){
+  if (pontuacao > 2 && pontuacao < 6){
   resultadoTexto.textContent = `É, podia ser melhor... mas você acertou ${pontuacao} de ${perguntas.length}, parabéns`;
   }
-  if (pontuacao > 4){
+  if (pontuacao > 5){
   resultadoTexto.textContent = `OWWWNNNNN, ela acertou todas as ${pontuacao} perguntas. To mt feliz, te amo, continue assim, bjss, agora pode receber seu presente❤`;
   }
 }
