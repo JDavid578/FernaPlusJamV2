@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
   <title>Dias com meu amorzinho</title>
 </head>
+
 <body>
   <div class="polaroid">
     <div class="photo-container">
@@ -30,65 +32,95 @@
     <h4>Juntos há:</h4>
     <div id="counter"></div>
     <div class="audio-player">
-  <div class="track-info">Die with a smile</div>
-  <audio id="audio" src="DieWithASmile.mp3"></audio>
-  <button id="playPauseBtn" aria-label="Tocar/Pausar">&#9658;</button>
-  <input type="range" id="progressBar" value="0" min="0" max="100" step="1">
-</div>
+      <div class="track-info">Die with a smile</div>
+      <audio id="audio" src="DieWithASmile.mp3"></audio>
+      <button id="playPauseBtn" aria-label="Tocar/Pausar">&#9658;</button>
+      <input type="range" id="progressBar" value="0" min="0" max="100" step="1">
+    </div>
   </div>
-<div class="seg-espace">
-  
-<b style="font-size: 22px;">Lua Nova</b>
-  <div class="caixa">
-    <img src="pngegg.png" alt="foto">
-  </div>
-  <div style="margin-bottom: 40px; margin-top: 20px;">
-    <b>No exato dia 2 de Dezembro de 2024, A lua estava em sua linda fase "Nova".</b>
-  </div>
-  <div style="margin-bottom: 20px;">
-    <b><span style="color: red;">"Curiosamente"</span> a Lua Nova representa:</b>
-  </div>
-  <div style="margin-bottom: 30px;">
-    <b style="color: cadetblue;">"Um período de novos começos, introspecção e estabelecimento de intenções"</b>
+  <div class="calendarespace">
+
+    <h1 class="titulo-calendario">Calendário Nosso ❤</h1>
+
+    <div class="calendario">
+      <div class="calendar">
+        <div class="header">
+          <button id="prev">&#8592;</button>
+          <h2 id="month-year"></h2>
+          <button id="next">&#8594;</button>
+        </div>
+        <div class="weekdays">
+          <div>D</div>
+          <div>S</div>
+          <div>T</div>
+          <div>Q</div>
+          <div>Q</div>
+          <div>S</div>
+          <div>S</div>
+        </div>
+        <div class="days" id="days"></div>
+      </div>
+      <div id="popup" class="popup" style="display:none" onclick="this.style.display='none'"></div>
+    </div>
+
   </div>
 
-</div>
+  <div class="seg-espace">
 
-<div class="terc-espace">
-  <div style="margin-bottom: 50px; margin-top: 50px; font-size: 20px;">
-    <b>Durante todo esse tempo, se passaram:</b>
-  </div>
-  
-  <div style="margin-bottom: 20px;">
-    <b id="totalday"></b>
-  </div>
+    <b style="font-size: 22px;">Lua Nova</b>
+    <div class="caixa">
+      <img src="pngegg.png" alt="foto">
+    </div>
+    <div style="margin-bottom: 40px; margin-top: 20px;">
+      <b>No exato dia 2 de Dezembro de 2024, A lua estava em sua linda fase "Nova".</b>
+    </div>
+    <div style="margin-bottom: 20px;">
+      <b><span style="color: red;">"Curiosamente"</span> a Lua Nova representa:</b>
+    </div>
+    <div style="margin-bottom: 30px;">
+      <b style="color: cadetblue;">"Um período de novos começos, introspecção e estabelecimento de intenções"</b>
+    </div>
 
-  <div style="margin-bottom: 19px;">
-    <b id="totalhour"></b>
-  </div>
-
-  <div style="margin-bottom: 18px;">
-  <b id="totalminute"></b>
-  </div>
-
-  <div style="margin-bottom: 70px;">
-  <b id="totalsecond"></b>
   </div>
 
-  <b style="font-size: 19px;">e em cada um desses segundos, eu agradeço por me fazer a pessoa mais feliz do mundo, por pintar a minha vida com seu amor e sempre tirar sorrisos bobos de mim ❤</b>
-</div>
+  <div class="terc-espace">
+    <div style="margin-bottom: 50px; margin-top: 50px; font-size: 20px;">
+      <b>Durante todo esse tempo, se passaram:</b>
+    </div>
 
-<div class="quizespace">
+    <div style="margin-bottom: 20px;">
+      <b id="totalday"></b>
+    </div>
 
-  <div style="margin-top: 50px; margin-left: 10px; margin-right: 10px; font-size: 19px;">
-    <b>Então vamos por a prova tudo que vivemos durante esses <span style="color: rgb(255, 116, 116);" id="diaspassados"></span> e ver se você realmente tem uma memoria tão boa quanto diz...</b>
+    <div style="margin-bottom: 19px;">
+      <b id="totalhour"></b>
+    </div>
+
+    <div style="margin-bottom: 18px;">
+      <b id="totalminute"></b>
+    </div>
+
+    <div style="margin-bottom: 70px;">
+      <b id="totalsecond"></b>
+    </div>
+
+    <b style="font-size: 19px;">e em cada um desses segundos, eu agradeço por me fazer a pessoa mais feliz do mundo, por
+      pintar a minha vida com seu amor e sempre tirar sorrisos bobos de mim ❤</b>
   </div>
 
-  <div style="margin-top: 80px;">
-    <button id="quiz" onclick="window.location.href='quiz.html'">iniciar</button>
+  <div class="quizespace">
+
+    <div style="margin-top: 50px; margin-left: 10px; margin-right: 10px; font-size: 19px;">
+      <b>Então vamos por a prova tudo que vivemos durante esses <span style="color: rgb(255, 116, 116);"
+          id="diaspassados"></span> e ver se você realmente tem uma memoria tão boa quanto diz...</b>
+    </div>
+
+    <div style="margin-top: 80px;">
+      <button id="quiz" onclick="window.location.href='quiz.html'">iniciar</button>
+    </div>
   </div>
-</div>
 
   <script src="script.js"></script>
 </body>
+
 </html>

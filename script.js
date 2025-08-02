@@ -20,12 +20,12 @@ function updateImage() {
   setTimeout(() => {
     image.src = imageLinks[currentIndex];
 
-    
+
     image.onload = () => {
       image.classList.remove("fade-out");
       image.classList.add("fade-in");
 
-      
+
       setTimeout(() => {
         image.classList.remove("fade-in");
       }, 500);
@@ -64,8 +64,8 @@ function updateCounter() {
   const seconds = Math.floor((elapsedTime % (1000 * 60)) / 1000);
 
   const totaldays = days;
-  const totalhours = Math.floor(elapsedTime / (1000*60*60));
-  const totalminutes = Math.floor(elapsedTime / (1000*60));
+  const totalhours = Math.floor(elapsedTime / (1000 * 60 * 60));
+  const totalminutes = Math.floor(elapsedTime / (1000 * 60));
   const totalseconds = Math.floor(elapsedTime / 1000);
 
   document.getElementById("counter").innerHTML =
@@ -76,16 +76,16 @@ function updateCounter() {
 
   document.getElementById("diaspassados").innerHTML =
     `${totaldays} dias`;
-    
+
   document.getElementById("totalhour").innerHTML =
-    `${totalhours} Horas ❤`;    
-    
+    `${totalhours} Horas ❤`;
+
   document.getElementById("totalminute").innerHTML =
     `${totalminutes} Minutos ❤`;
-    
+
   document.getElementById("totalsecond").innerHTML =
-    `${totalseconds} Segundos ❤ `;  
-    
+    `${totalseconds} Segundos ❤ `;
+
 
 }
 
@@ -117,3 +117,68 @@ audio.addEventListener("timeupdate", () => {
 progressBar.addEventListener("input", () => {
   audio.currentTime = (progressBar.value / 100) * audio.duration;
 });
+
+//script do calendario
+
+const daysEl = document.getElementById("days");
+const monthYearEl = document.getElementById("month-year");
+const popup = document.getElementById("popup");
+
+let currentDate = new Date();
+
+
+const photos = {
+  '2024-09-20': 'https://lh3.googleusercontent.com/pw/AP1GczMKDVUgrvzSVQvBrYwCAJxhEx0NhxHROyF9ee9JzO5L1INHXV7AAmdX6J12Q3S2vCC64FwN7Ifk63GGECyzwyC_Q_X0y8UzYxlDFpCzJ86z8qWyI-t7AeSHriQbtCfqI6zz_nZuJ23vfqwLk8UsqItwng=w1266-h948-s-no-gm?authuser=1',
+  '2025-02-14': 'https://via.placeholder.com/500x300.png?text=Valentine',
+  '2026-07-09': 'https://via.placeholder.com/500x300.png?text=Dia+Especial'
+};
+
+const renderCalendar = () => {
+  daysEl.innerHTML = "";
+  const year = currentDate.getFullYear();
+  const month = currentDate.getMonth();
+  const firstDay = new Date(year, month, 1);
+  const lastDay = new Date(year, month + 1, 0);
+
+  monthYearEl.innerText = `${firstDay.toLocaleString('pt-BR', { month: 'long' })} ${year}`;
+
+  const startWeekDay = firstDay.getDay();
+  const totalDays = lastDay.getDate();
+
+  for (let i = 0; i < startWeekDay; i++) {
+    const blank = document.createElement("div");
+    daysEl.appendChild(blank);
+  }
+
+  for (let day = 1; day <= totalDays; day++) {
+    const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    const div = document.createElement("div");
+    div.className = "day";
+    div.textContent = day;
+
+    if (photos[dateStr]) {
+      const marker = document.createElement("div");
+      marker.className = "marker";
+      marker.innerHTML = "❤️";
+      div.appendChild(marker);
+
+
+      div.onclick = () => {
+        popup.innerHTML = `<img src="${photos[dateStr]}" alt="Imagem do dia">`;
+        popup.style.display = "flex";
+      }
+    }
+    daysEl.appendChild(div);
+  }
+};
+
+document.getElementById("prev").onclick = () => {
+  currentDate.setMonth(currentDate.getMonth() - 1);
+  renderCalendar();
+};
+document.getElementById("next").onclick = () => {
+  currentDate.setMonth(currentDate.getMonth() + 1);
+  renderCalendar();
+};
+
+renderCalendar();
