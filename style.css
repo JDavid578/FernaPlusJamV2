@@ -490,3 +490,45 @@ img.fade-in {
     opacity: 1;
   }
 }
+
+/* CSS da animação de coração */
+
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  /* Fica no fundo */
+  pointer-events: none;
+}
+
+.heart {
+  position: absolute;
+  bottom: -30px;
+  font-size: 24px;
+  animation: subir 5s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes subir {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-100vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.conteudo {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  margin-top: 40vh;
+  font-size: 2em;
+}

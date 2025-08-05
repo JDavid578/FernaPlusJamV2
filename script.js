@@ -1,8 +1,12 @@
 const imageLinks = [
+  "https://lh3.googleusercontent.com/pw/AP1GczPYV5Ztke3UoVdgvWrSHf2oFHJ4JhxqRh6sf2ZTF0ujb7t7OKAiQuERxYR_W3WJrTPdUryoFkeKoMbOwtirPX0mb8hmia8ouAPU-XM4r3PIdJRtTp4lUZi2P0_7_bYp-3kMuejBGGHtT3OPPJE2Iz4rEw=w856-h642-s-no-gm?authuser=0",
+  "https://lh3.googleusercontent.com/pw/AP1GczM2KJ1Tz_8AttVKqql4Ku2ZgtFhvYeMFme2_RdHAlxOnZbJr9GylDYkRrRv-V0gBHklSOEmOFmCjvaGQ0OwO2MNL11hrB8fIEyG72E4bXJvhWxGV9g1-yaKhGSvsrvrADdZw-BtvFI1mvOeJA0Lntaxvw=w482-h642-s-no-gm?authuser=0",
   "https://lh3.googleusercontent.com/pw/AP1GczP6ZVV2vnp1ioZDDr1BQMk-KfwBHGpNSJNlg2YxsuZsTli2CSchOi_L2I7JcO8uxCr_jQ2yOisix3HU805ZikOXRZK0GkKqRq1HzcG2Hqs9Af1m41W9zJzUECXy3FdSvMHf5mef01Xf1imdaPYhtc-GCw=w861-h950-s-no-gm?authuser=0",
   "https://lh3.googleusercontent.com/pw/AP1GczO800CVF87_ecewlPFfHygEDvMhI9RgrzGCYuj8RNnaV3FIR6IBNHEp-JoIdRKeF0O3naC18-R1qJj1jxsuN0hvGFW2a1qeuev0zcox-ZLqRzAwFzMVcyPmZIuXwVgYXvAD_f7018UQOHQOvOjrGfi6LQ=w709-h948-s-no-gm?authuser=1",
   "https://lh3.googleusercontent.com/pw/AP1GczNM30eWjSSsEUXMqMAb-zWn2o1koN1byJ9Va9ygIaF_jXPBY1Vi0lXLALmtTUuyPV4STJym73RuTgqAEWrLdKmP82gPuHei9lpPkeLZUHqKms6941AJJoDoO87Jwga60zOduhxmZO5m59XTVQkJtWNJqQ=w1264-h948-s-no-gm?authuser=1",
+  "https://lh3.googleusercontent.com/pw/AP1GczN0XJXkxpay2S1UetaFhFHrxz4cusvI-ON6PMQ0-vsSCiK8rj7AetlU2kPgyuRSXb5kTp7sNuvQNct3Hye5VAgXYOH6oUCo8nF4F4L-eY0MzEuQpGEEBPv5eE-rgDYEwxdnEXE0vF3494VdjZpzWMwN-A=w482-h642-s-no-gm?authuser=0",
   "https://lh3.googleusercontent.com/pw/AP1GczOQbT-RgSTNIQZqcT0ZQFfx6ApRyUMu1xwkuNGmQounjefeWXr9LpkclgNXyEMpA5nrU0MLIMtmqGSj5mHzPc10mAa_YOlVolyq-StJIcn0O_FFd7AEbN4UUnJTk3_-eYjLhhunNiIaAcdI5LklHPXu7g=w711-h948-s-no-gm?authuser=1",
+  "https://lh3.googleusercontent.com/pw/AP1GczOKQvua8ySolbvoNCjNFJM8mr--eLviyOHvj8SDVH1edyhzc2Tk9ZfDm_iePJ5O_wiwYrwrttptESpV6sCzPMDp6eNkMyUU67Ni3CHFx9O_wAWCSz-dw1YMSXpK_bqolb90cmmtaSzkWUbxVcaxi2EAXA=w481-h642-s-no-gm?authuser=0",
   "https://lh3.googleusercontent.com/pw/AP1GczMVX6DOkJZMUR9w5gHnyBf8raWGahaPrNDM8f-hSboU2VmvAxboo9_UnDxP6FgpTZucPtWqSrmRpS7gl2JOXPcD3BOCoW7L5AP4brZwTw3jH44na1624zZLwI6WdbmvGZrcsa_1SQIJA1QRvZQdQRrSTg=w711-h948-s-no-gm?authuser=1",
   "https://lh3.googleusercontent.com/pw/AP1GczMNQ6sj0yQ4nZ0qJuT0ApDFLP0ONrsQklCd_h0Q6TnjzrXsxUeKBKFGUO8_HZw5MgaxZ8I-LviJXOHZ8iPFenxkrJA4bgv-yAhfpjPCsgkdte7SOXH_G4YetxZ-Cmv-ebHVgMxjtSE0HGREa2yXeprjLw=w1264-h948-s-no-gm?authuser=1",
   "https://lh3.googleusercontent.com/pw/AP1GczPLgyE2QsYwkqRAsygaRcucUvFjZjy-ZJUAHrqphsEox2JLhQ0BB-vXVw1E6Ip1KMjYcuWVepgdX05mTV1dnVmn2PCwVv_nnD59Q6RcUtwHiAcS_v5tT3t6hK_P3zcsS-InRY3JBG3qG_dwXxvSLObGbQ=w1264-h948-s-no-gm?authuser=1",
@@ -191,7 +195,7 @@ const photos = {
   '2024-01-01': 'https://lh3.googleusercontent.com/pw/AP1GczOhptDkdF2dpbJm63F18S2kmZd1y_UJKDxyh6oQ-wmuhIxXPexU9hh8QQj6GQk6wUR7amTnL96_qha8Pcof16zuvHGDJ28rAPTgsYp1PYJsWwRAAPkMT44gNF_H6dlqwbeOyDydPjoAf4Ef8EAc-bPcLw=w711-h948-s-no-gm?authuser=5',
   '2024-01-30': 'https://lh3.googleusercontent.com/pw/AP1GczNTqxiswEvTHzRx8jKh37SIpldHD4TV3DZ9mkG1kbaJ_U_ko3y-iGD6470NwJsz0iQxmbqtz0vj9ug5LNPtfBKEorDMKgRzXgT3bnAta_RtveYI19T4qIaI8rDQSHBaRJuHmOfd8jAFlH-3B5gtl2Db6w=w426-h948-s-no-gm?authuser=5',
 
-  
+
 
 };
 
@@ -244,3 +248,24 @@ document.getElementById("next").onclick = () => {
 };
 
 renderCalendar();
+
+// Script dos corações no fundo
+
+const container = document.querySelector('.hearts');
+
+function criarCoracao() {
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.textContent = '❤️';
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+  heart.style.fontSize = 16 + Math.random() * 24 + 'px';
+
+  container.appendChild(heart);
+
+  setTimeout(() => {
+    heart.remove();
+  }, 6000);
+}
+
+setInterval(criarCoracao, 300);

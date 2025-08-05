@@ -76,14 +76,14 @@ function mostrarResultado() {
   quizContainer.style.display = "none";
   resultadoSection.style.display = "flex";
 
-  if (pontuacao < 3){
-  resultadoTexto.textContent = `Ihhhhhh, esperava mais em... acertar só ${pontuacao} de ${perguntas.length} perguntas ta fraco, tente dnv`;
+  if (pontuacao < 3) {
+    resultadoTexto.textContent = `Ihhhhhh, esperava mais em... acertar só ${pontuacao} de ${perguntas.length} perguntas ta fraco, tente dnv`;
   }
-  if (pontuacao > 2 && pontuacao < 6){
-  resultadoTexto.textContent = `É, podia ser melhor... mas você acertou ${pontuacao} de ${perguntas.length}, parabéns`;
+  if (pontuacao > 2 && pontuacao < 6) {
+    resultadoTexto.textContent = `É, podia ser melhor... mas você acertou ${pontuacao} de ${perguntas.length}, parabéns`;
   }
-  if (pontuacao > 5){
-  resultadoTexto.textContent = `OWWWNNNNN, ela acertou todas as ${pontuacao} perguntas. To mt feliz, te amo, continue assim, bjss, agora pode receber seu presente❤`;
+  if (pontuacao > 5) {
+    resultadoTexto.textContent = `OWWWNNNNN, ela acertou todas as ${pontuacao} perguntas. To mt feliz, te amo, continue assim, bjss, agora pode receber seu presente❤`;
   }
 }
 
